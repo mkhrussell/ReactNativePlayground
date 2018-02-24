@@ -4,6 +4,7 @@ import { StackNavigator } from 'react-navigation';
 // Screens
 import Home from './src/ui/screens/Home';
 import SimpleCallback from './src/ui/screens/SimpleCallback';
+import PromiseBased from './src/ui/screens/PromiseBased';
 
 const App = StackNavigator({
   Home: {
@@ -11,6 +12,9 @@ const App = StackNavigator({
   },
   SimpleCallback: {
     screen: SimpleCallback
+  },
+  PromiseBased: {
+    screen: PromiseBased
   }
 });
 

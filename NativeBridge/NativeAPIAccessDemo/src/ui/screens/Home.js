@@ -18,10 +18,15 @@ class Home extends Component {
     this.props.navigation.navigate('SimpleCallback');
   }
 
+  promiseBasedDemoHandler = () => {
+    this.props.navigation.navigate('PromiseBased');
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <CustomButton title="Simple Callback" onPress={this.simpleCallbackDemoHandler} />
+        <CustomButton style={{marginTop: 10}} title="Promise Based" onPress={this.promiseBasedDemoHandler} />
       </View>
     );
   }
