@@ -6,6 +6,7 @@ import Home from './src/ui/screens/Home';
 import SimpleCallback from './src/ui/screens/SimpleCallback';
 import PromiseBased from './src/ui/screens/PromiseBased';
 import EventEmitter from './src/ui/screens/EventEmitter';
+import NativeConstants from './src/ui/screens/NativeConstants';
 
 const App = StackNavigator({
   Home: {
@@ -19,6 +20,9 @@ const App = StackNavigator({
   },
   EventEmitter: {
     screen: EventEmitter
+  },
+  NativeConstants: {
+    screen: NativeConstants
   }
 });
 

@@ -26,12 +26,17 @@ class Home extends Component {
     this.props.navigation.navigate('EventEmitter');
   }
 
+  nativeConstantsDemoHandler = () => {
+    this.props.navigation.navigate('NativeConstants');
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <CustomButton title="Simple Callback" onPress={this.simpleCallbackDemoHandler} />
         <CustomButton style={{marginTop: 10}} title="Promise Based" onPress={this.promiseBasedDemoHandler} />
         <CustomButton style={{marginTop: 10}} title="Event Emitter" onPress={this.eventEmitterDemoHandler} />
+        <CustomButton style={{marginTop: 10}} title="Native Constants" onPress={this.nativeConstantsDemoHandler} />
       </View>
     );
   }

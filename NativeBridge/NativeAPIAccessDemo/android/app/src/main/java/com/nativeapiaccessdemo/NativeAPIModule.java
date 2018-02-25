@@ -13,6 +13,7 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.Arguments;
 
 import java.util.Map;
+import java.util.HashMap;
 
 @ReactModule(name = "NativeAPIModule")
 public class NativeAPIModule extends ReactContextBaseJavaModule {
@@ -24,6 +25,14 @@ public class NativeAPIModule extends ReactContextBaseJavaModule {
     @Override
     public String getName() {
         return "NativeAPIModule";
+    }
+
+    @Override
+    public Map<String, Object> getConstants() {
+        final Map<String, Object> constants = new HashMap<>();
+        constants.put("FIRST_DAY_OF_WEEK", "Monday");
+        constants.put("FIRST_MONTH_OF_YEAR", "January");
+        return constants;
     }
 
     @ReactMethod

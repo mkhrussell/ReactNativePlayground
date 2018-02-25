@@ -12,6 +12,15 @@
 
 RCT_EXPORT_MODULE();
 
+// Constants
+- (NSDictionary *)constantsToExport
+{
+  return @{
+           @"FIRST_DAY_OF_WEEK": @"Monday",
+           @"FIRST_MONTH_OF_YEAR": @"January",
+          };
+}
+
 RCT_EXPORT_METHOD(addNumbers:(double)a  with:(double)b callback:(RCTResponseSenderBlock)callback)
 {
   double sum = a + b;
