@@ -36,4 +36,16 @@ RCT_EXPORT_METHOD(makeGreetingText:(NSString *)name resolver: (RCTPromiseResolve
   }
 }
 
+// Event Emitters
+- (NSArray<NSString *> *)supportedEvents
+{
+  return @[@"onGenerateEvent"];
+}
+
+// Manually trigger an event
+RCT_EXPORT_METHOD(generateEvent)
+{
+  [self sendEventWithName:@"onGenerateEvent" body:@{@"message": @"I am from generated event."}];
+}
+
 @end

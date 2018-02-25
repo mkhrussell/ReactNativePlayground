@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
 
-@interface NativeAPIModule : NSObject <RCTBridgeModule>
+@interface NativeAPIModule : RCTEventEmitter <RCTBridgeModule>
 
 @end

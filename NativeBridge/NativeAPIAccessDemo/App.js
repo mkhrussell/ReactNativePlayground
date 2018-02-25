@@ -5,6 +5,7 @@ import { StackNavigator } from 'react-navigation';
 import Home from './src/ui/screens/Home';
 import SimpleCallback from './src/ui/screens/SimpleCallback';
 import PromiseBased from './src/ui/screens/PromiseBased';
+import EventEmitter from './src/ui/screens/EventEmitter';
 
 const App = StackNavigator({
   Home: {
@@ -15,6 +16,9 @@ const App = StackNavigator({
   },
   PromiseBased: {
     screen: PromiseBased
+  },
+  EventEmitter: {
+    screen: EventEmitter
   }
 });
 
