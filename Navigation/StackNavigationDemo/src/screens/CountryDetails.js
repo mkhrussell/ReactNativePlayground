@@ -12,7 +12,6 @@ class CountryDetails extends Component {
       title: "Country Details",
       headerStyle: {
         //backgroundColor: 'green',
-        justifyContent: 'center'
       },
       headerTitleStyle: {
         //color: 'white',

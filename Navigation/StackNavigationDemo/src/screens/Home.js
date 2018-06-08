@@ -5,8 +5,7 @@ class Home extends Component {
   static navigationOptions = {
     title: "Home",
     headerStyle: {
-      //backgroundColor: 'green',
-      justifyContent: 'center'
+      backgroundColor: 'green',
     },
     headerTitleStyle: {
       //color: 'white',

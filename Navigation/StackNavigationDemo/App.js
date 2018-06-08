@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 // Screens
 import Home from './src/screens/Home';
 import CountryListModal from './src/screens/CountryListModal';
 import CountryDetails from './src/screens/CountryDetails';
 
-const RootStack = StackNavigator({
+const RootStack = createStackNavigator({
   Home: {
     screen: Home
   },
@@ -15,7 +14,7 @@ const RootStack = StackNavigator({
   }
 });
 
-const App = StackNavigator({
+const App = createStackNavigator({
     Root: {
       screen: RootStack
     },
