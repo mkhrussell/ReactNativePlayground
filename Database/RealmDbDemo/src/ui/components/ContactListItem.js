@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 
 const ContactListItem = (props) => {
   return (
-    <View>
+    <TouchableOpacity onPress={props.onPressItem}>
       <Text>{props.data.name}</Text>
       <Text>{props.data.phone}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 

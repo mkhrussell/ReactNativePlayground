@@ -8,6 +8,7 @@ import { realmConfig } from './db/realmConfig'
 import ContactList from './ui/containers/ContactList';
 import ContactAddButton from './ui/components/ContactAddButton';
 import ContactSearchBox from './ui/components/ContactSearchBox';
+import ContactDetails from './ui/components/ContactDetails';
 
 export default class App extends Component {
   state = {
@@ -39,11 +40,16 @@ export default class App extends Component {
     this.setState({ filteredContacts });
   }
 
+  contactListItemPressed = (item, index) => {
+    this.contactDetails.showModal(item);
+  }
+
   render() {
     return (
       <View style={styles.container}>
+        <ContactDetails ref={contactDetailsRef => this.contactDetails = contactDetailsRef} />
         <ContactSearchBox searchHandler={this.searchHandler} />
-        <ContactList data={this.state.filteredContacts} />
+        <ContactList data={this.state.filteredContacts} onPressItem={this.contactListItemPressed} />
         <ContactAddButton onPress={this.addContact} />
       </View>
     );
